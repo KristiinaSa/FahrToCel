@@ -12,10 +12,16 @@ public class FahrToCel {
         return Math.round(c);
     }
 
+    public static float convertKeltoFahr(float kel) {
+        float f = ((kel - 273.15f) * 9/5 + 32);
+        return Math.round(f);
+    }
+
     public static void main(String[] args) {
         float f = 32;
         System.out.println("Fahrenheit: " + f);
         System.out.println("Celsius: " + convertFahr(f));
+        System.out.println("Kelvin to Fahrenheit: " + convertKeltoFahr(373.15f));
     }
 }
 
